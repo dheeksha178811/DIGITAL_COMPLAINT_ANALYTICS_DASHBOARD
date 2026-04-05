@@ -69,7 +69,7 @@ const ComplaintDetailPage = () => {
 
     useEffect(() => {
         loadComplaint();
-    }, [id]);
+    }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const loadComplaint = async () => {
         try {

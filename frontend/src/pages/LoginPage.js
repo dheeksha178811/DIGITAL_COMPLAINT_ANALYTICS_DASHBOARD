@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { publicService } from '../services/complaintService';
-import { ADMIN_LEVELS } from '../utils/constants';
 import './LoginPage.css';
 
 const LoginPage = () => {

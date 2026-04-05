@@ -25,7 +25,7 @@ const NoticesPage = () => {
 
     useEffect(() => {
         loadNotices();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const loadNotices = async () => {
         try {

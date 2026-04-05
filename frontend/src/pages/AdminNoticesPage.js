@@ -24,7 +24,7 @@ const AdminNoticesPage = () => {
     useEffect(() => {
         loadNotices();
         loadAssignedAreaNames();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     // Fetch human-readable names for all assigned geographic units
     const loadAssignedAreaNames = async () => {

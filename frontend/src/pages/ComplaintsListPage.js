@@ -53,7 +53,7 @@ const ComplaintsListPage = () => {
 
   useEffect(() => {
     loadComplaints();
-  }, [filter]);
+  }, [filter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const loadComplaints = async () => {
     try {

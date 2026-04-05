@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { complaintService, publicService } from '../services/complaintService';
+import { complaintService } from '../services/complaintService';
 import { CATEGORIES } from '../utils/constants';
 import LoadingSpinner from '../components/LoadingSpinner';
 import './NewComplaintPage.css';

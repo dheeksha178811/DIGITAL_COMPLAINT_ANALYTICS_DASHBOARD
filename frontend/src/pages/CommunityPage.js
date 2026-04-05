@@ -165,7 +165,6 @@ const CommunityPage = () => {
                         const isOwn = (complaint.citizen_id?._id || complaint.citizen_id)?.toString() === user._id?.toString();
                         const hasVoted = votedIds.has(complaint._id);
                         const isVoting = votingId === complaint._id;
-                        const canVote = !isOwn && !hasVoted && !complaint.status === 'RESOLVED';
 
                         return (
                             <article key={complaint._id} className="community-card">
