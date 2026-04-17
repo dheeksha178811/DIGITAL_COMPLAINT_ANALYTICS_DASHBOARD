@@ -1,0 +1,415 @@
+.complaint-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── Top bar ─────────────────────────────────────────── */
+.detail-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-back {
+    background: none;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.btn-back:hover {
+    background: #f3f4f6;
+}
+
+.detail-topbar-badges {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* ── Two-column grid ─────────────────────────────────── */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* ── Cards ───────────────────────────────────────────── */
+.detail-card,
+.sidebar-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.25rem;
+}
+
+.sidebar-card:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Complaint header ────────────────────────────────── */
+.detail-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.detail-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* ── Sections ────────────────────────────────────────── */
+.detail-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.detail-section h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+}
+
+.detail-description {
+    color: #374151;
+    line-height: 1.7;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.detail-landmark {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* ── Status timeline ─────────────────────────────────── */
+.status-timeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #e5e7eb;
+    z-index: 0;
+}
+
+.timeline-step.done::after,
+.timeline-step.active::after {
+    background: #3b82f6;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    border: 2px solid #e5e7eb;
+    z-index: 1;
+    position: relative;
+}
+
+.timeline-step.done .timeline-dot {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.timeline-step.active .timeline-dot {
+    background: white;
+    border-color: #3b82f6;
+    outline: 3px solid rgba(59, 130, 246, 0.2);
+}
+
+.timeline-label {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.timeline-step.done .timeline-label {
+    color: #3b82f6;
+}
+
+.timeline-step.active .timeline-label {
+    color: #1d4ed8;
+}
+
+.status-rejected-banner {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ── Officer Feedback ────────────────────────────────── */
+.feedback-section h3 {
+    color: #7c3aed;
+}
+
+.feedback-box {
+    background: #f5f3ff;
+    border-left: 4px solid #7c3aed;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.feedback-box p {
+    margin: 0 0 0.5rem 0;
+    color: #374151;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.feedback-by {
+    font-size: 0.8rem;
+    color: #7c3aed;
+    font-weight: 600;
+}
+
+/* ── Info list (sidebar) ─────────────────────────────── */
+.sidebar-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.info-list dt {
+    color: #9ca3af;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.info-list dd {
+    color: #374151;
+    margin: 0;
+    font-weight: 500;
+}
+
+.overdue-text {
+    color: #ef4444 !important;
+    font-weight: 700 !important;
+}
+
+/* ── Admin update panel ──────────────────────────────── */
+.update-card {
+    border: 2px solid #3b82f6;
+}
+
+.update-card h3 {
+    color: #1d4ed8;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.char-hint {
+    display: block;
+    text-align: right;
+    font-size: 0.72rem;
+    color: #9ca3af;
+    margin-top: 0.25rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-primary.full-width {
+    width: 100%;
+}
+
+/* ── Alerts ──────────────────────────────────────────── */
+.alert-error {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.alert-success {
+    background: #d1fae5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+/* ── Final state cards ───────────────────────────────── */
+.final-card.resolved {
+    border: 2px solid #10b981;
+}
+
+.final-card.resolved h3 {
+    color: #065f46;
+}
+
+.final-card.rejected {
+    border: 2px solid #ef4444;
+}
+
+.final-card.rejected h3 {
+    color: #dc2626;
+}
+
+/* ── Citizen status card ─────────────────────────────── */
+.citizen-status-card {
+    border-left: 4px solid #3b82f6;
+}
+
+.citizen-status-display {
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background: #f9fafb;
+}
+
+.citizen-status-display.status-resolved {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.citizen-status-display.status-rejected {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.citizen-status-display.status-in_progress {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.citizen-status-display.status-overdue {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+/* ── Error page ──────────────────────────────────────── */
+.detail-error {
+    text-align: center;
+    padding: 4rem;
+}
+
+.detail-error h2 {
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 900px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

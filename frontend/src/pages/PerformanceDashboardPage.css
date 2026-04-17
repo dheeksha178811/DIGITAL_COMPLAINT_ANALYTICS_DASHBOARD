@@ -1,0 +1,291 @@
+.perf-dashboard {
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.perf-header {
+    margin-bottom: 2.5rem;
+}
+
+.perf-header h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin: 0 0 0.5rem 0;
+}
+
+.perf-header p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.perf-error {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.perf-empty {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    color: #6b7280;
+}
+
+.perf-section-title {
+    font-size: 1.25rem;
+    color: #374151;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 0.5rem;
+}
+
+/* Cards */
+.perf-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.perf-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    border: 1px solid #f3f4f6;
+    transition: transform 0.2s;
+}
+
+.perf-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.perf-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.perf-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.perf-card-header h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+    color: #111827;
+}
+
+.perf-designation {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Score Badges */
+.perf-badge {
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+}
+
+.perf-badge-small {
+    display: inline-block;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 50px;
+}
+
+.score-green {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.score-yellow {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.score-red {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.perf-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.perf-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.perf-stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.perf-stat-val {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.perf-stat-val small {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: normal;
+}
+
+.text-red {
+    color: #dc2626 !important;
+}
+
+.text-green {
+    color: #16a34a !important;
+}
+
+.text-bold-red {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Single view */
+.perf-single-view {
+    max-width: 600px;
+}
+
+.perf-explanation {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+}
+
+.perf-explanation h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #1e293b;
+}
+
+.perf-explanation p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* CSS Bar Chart */
+.perf-chart-section {
+    margin-bottom: 3.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.css-bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bar-label {
+    width: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bar-fill {
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    font-weight: 700;
+    min-width: 50px;
+    /* So 0% still shows text */
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Table */
+.perf-table-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.perf-table-container {
+    overflow-x: auto;
+}
+
+.perf-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.perf-table th {
+    text-align: left;
+    padding: 1rem;
+    background: #f9fafb;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.perf-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.95rem;
+    color: #1f2937;
+    vertical-align: middle;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
